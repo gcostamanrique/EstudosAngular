@@ -20,3 +20,40 @@
         font-size: 40px;
     }
 }
+
+
+// ::ng-deep aplica o estilo ignorando se o elemento é filho ou não e sobrescrevendo o estilo do botão
+::ng-deep app-card-button-cancel .card-button-cancel {
+    background-color: aqua !important;
+}
+
+// ::ng-deep aplica o estilo ignorando se o elemento é filho ou não e sobrescrevendo o estilo do botão
+::ng-deep .cancel-button .card-button-cancel {
+    background-color: yellow !important;
+}
+
+// ::ng-deep aplica o estilo ignorando se o elemento é filho ou não e sobrescrevendo o estilo do botão
+::ng-deep #cancel-button .card-button-cancel {
+    background-color: purple !important;
+}
+
+// :host causa o efeito de fazer com que o ::ng-deep alterer somente o elemento filho
+// ::ng-deep aplica o estilo ignorando se o elemento é filho ou não e sobrescrevendo o estilo do botão
+:host ::ng-deep .cancel-button-2 .card-button-cancel {
+    background-color: blueviolet !important;
+}
+
+// :host causa o efeito de fazer com que o ::ng-deep alterer somente o elemento filho
+// ::ng-deep aplica o estilo ignorando se o elemento é filho ou não e sobrescrevendo o estilo do botão
+:host ::ng-deep #cancel-button-2 .card-button-cancel {
+    background-color: black !important;
+}
+
+// Alteracao da cor do slider do angular material de forma local
+:host ::ng-deep mat-slider .mdc-slider__track--active_fill {
+    border-color: red !important;
+}
+
+.global {
+    background-color: cadetblue;
+}
