@@ -8,7 +8,7 @@ import { StyleClassBindingComponent } from './style-class-binding/style-class-bi
   imports: [
     //RouterOutlet,
     //PropertyEventAttributeBindingComponent,
-    StyleClassBindingComponent,
+    //StyleClassBindingComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
