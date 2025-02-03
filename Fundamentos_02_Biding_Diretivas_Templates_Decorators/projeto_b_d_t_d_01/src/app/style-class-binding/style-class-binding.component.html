@@ -1,0 +1,93 @@
+<!-- Style Binding-->
+
+<button style="width: 100px; background-color: aqua;">Botão 00</button>
+
+<br />
+<br />
+
+<button [style.width]="widthButton01" [style.backgroundColor]="'blue'">Botão 01</button>
+
+<br />
+<br />
+
+<button [style.width.px]="widthButton02" [style.backgroundColor]="'pink'">Botão 02</button>
+
+<br />
+<br />
+
+<button [style]="'width: 130px; backgroundColor: brown;'">Botão 03</button>
+
+<br />
+<br />
+
+<button [style]="{width: '140px', backgroundColor: 'orange'}">Botão 04</button>
+
+<br />
+<br />
+
+<button [style]="stylesObj">Botão 05</button>
+
+<br />
+<br />
+
+<button (click)="updateStyleObj()">Atualizar OBJ Errado</button>
+
+<br />
+<br />
+
+<button (click)="updateStyleObjCorrect()">Atualizar OBJ Correto</button>
+
+<br />
+<br />
+
+<button (click)="updateStyleObjCorrectInitial()">Atualizar OBJ Para Inicial</button>
+
+<br />
+<br />
+
+<button (click)="updateWidth()">Atualizar Botão 1 e 2</button>
+
+<br />
+<br />
+
+<button (click)="updateWidthInitial()">Atualizar Botão 1 e 2 (Inicial)</button>
+
+<br />
+<br />
+<br />
+<br />
+
+<!-- Class Biding-->
+
+<button [class.red-button]="true">Vermelho</button>
+
+<button [class.green-button]="true">Verde</button>
+
+<br />
+<br />
+
+<button [class.red-button]="isRedButton">Vermelho</button>
+
+<button [class.green-button]="isGreenButton">Verde</button>
+
+<br />
+<br />
+
+<button [class]="'red-button'">Vermelho</button>
+
+<button [class]="'green-button'">Verde</button>
+
+<br />
+<br />
+
+<button [class]="{'red-button': true, 'green-button': false}">Vermelho</button>
+<button [class]="{'red-button': false, 'green-button': true,}">Verde</button>
+
+<br />
+<br />
+
+<button [class.red-button]="true" (click)="updateRed()">Vermelho</button>
+
+<button [class.green-button]="true"  (click)="updateGreen()">Verde</button>
+
+<button [class]="{'red-button': !isGreen, 'green-button': !isRed}" >Objeto</button>

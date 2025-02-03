@@ -1,0 +1,48 @@
+<!-- Property e Event Binding -->
+
+<!-- (keyup)="handleInputKeyup($event)" -->
+<input id="meu-input" [value]="inputText" [type]="inputType" [disabled]="isDisabled"
+  (input)="handleInputEvent($event)" />
+
+<br />
+<br />
+
+<button (click)="enableInput()">Habilitar</button>
+<button (click)="disableInput()">Desabilitar</button>
+
+<br />
+<br />
+
+<button (click)="enableText()">Text</button>
+<button (click)="enablePassword()">Password</button>
+
+<br />
+<br />
+
+<button (click)="enableInputTextPadrao()">Input Padrão</button>
+<button (click)="enableInputTextAlterado()">Input Alterado</button>
+
+<br />
+<br />
+
+<button (click)="logInputText()">Log</button>
+
+<br />
+<br />
+
+
+<!-- Attribute e Event Binding -->
+
+<h4>Contador: {{contador}}</h4>
+
+<button [attr.title]="buttonTitle">Teste</button>
+
+<br />
+<br />
+
+<button [attr.disabled]="buttonDisable ? true : null">Disabled</button>
+
+<br />
+<br />
+
+<button (click)="onButtonClick()">Mudar Popriedades</button>
