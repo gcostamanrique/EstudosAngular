@@ -16,4 +16,8 @@ import { CardRoxoComponent } from './card-roxo/card-roxo.component';
 export class AppComponent {
   cardPlanType = 'Simples';
   cardPlanPrice = 100;
+
+  handlePlanType(text: string){
+    this.cardPlanType = text;
+  }
 }

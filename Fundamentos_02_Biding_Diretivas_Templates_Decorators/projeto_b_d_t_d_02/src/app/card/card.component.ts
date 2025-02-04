@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, numberAttribute } from '@angular/core';
 import { CardButtonComponent } from '../card-button/card-button.component';
 
 @Component({
@@ -10,7 +10,33 @@ import { CardButtonComponent } from '../card-button/card-button.component';
   styleUrls: ['./card.component.scss'],
 })
 export class CardComponent {
-  @Input('planType') planType: string = '';
-  @Input({ required: true, alias: 'planPriceAlias' }) planPrice: number = 0;
+  
+  @Input({ required: true, alias: 'planPriceAlias', transform: numberAttribute }) planPrice: number = 0;
 
+  //-------------------------------------------
+
+  // private _planType: string = '';
+  
+  // @Input('planType')
+  
+  // set planType(value: string) {
+  //   this._planType = value.toUpperCase();
+  // }
+
+  // get planType(): string {
+  //   return this._planType;
+  // }
+  
+  //-------------------------------------------
+
+  @Input({ alias: 'planType', transform: (value: string) => handlePlanType(value) }) planType: string = '';
+
+  buttonClicked(valueEmitted: boolean) {
+    console.log("buttonClicked(" + valueEmitted + ")");
+    console.log("planType", this.planType);
+  }
+}
+
+function handlePlanType(value: string) {
+  return value.toUpperCase();
 }

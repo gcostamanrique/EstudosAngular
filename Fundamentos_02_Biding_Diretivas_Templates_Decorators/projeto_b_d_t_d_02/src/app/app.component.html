@@ -3,11 +3,14 @@
     planType="Simples Teste" 
     [planPriceAlias]="1000">
   </app-card> -->
-  
-  <app-card 
-    [planType]="cardPlanType" 
-    [planPriceAlias]="cardPlanPrice">
+
+  <app-card [planType]="cardPlanType" [planPriceAlias]="cardPlanPrice">
   </app-card>
 
   <app-card-roxo></app-card-roxo>
 </div>
+
+<br />
+<br />
+
+<input #meuInput type="text" (keyup)="handlePlanType(meuInput.value)" placeholder="Digite o plano" />
