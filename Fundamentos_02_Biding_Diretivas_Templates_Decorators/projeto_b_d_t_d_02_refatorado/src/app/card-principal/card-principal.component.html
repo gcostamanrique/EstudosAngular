@@ -1,0 +1,10 @@
+<div class="card-principal">
+    <h1>{{ tituloPagina }}</h1>
+
+    <div class="card-principal-input-botao">
+        <app-input-principal (algoDigitado)="algoDigitado($event)"></app-input-principal>
+        <app-botao-principal (botaoAcionado)="botaoAcionado()"></app-botao-principal>
+    </div>
+
+    <app-painel-principal [apresentado]="textoApresentado" ></app-painel-principal>
+</div>
