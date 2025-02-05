@@ -1,0 +1,15 @@
+<h1>Nome:</h1>
+
+<input type="text" [ngModel]="name01" (ngModelChange)="handeInputChange01($event)" />
+
+<h1>Nome Digitado: {{ name01 }}</h1>
+
+<br />
+<br />
+<br />
+
+<h1>Nome:</h1>
+
+<input type="text" [(ngModel)]="name02" (ngModelChange)="handeInputChange02($event)" />
+
+<h1>Nome Digitado: {{ name02 }}</h1>

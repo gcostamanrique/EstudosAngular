@@ -1,0 +1,51 @@
+<button (click)="toggleProp()">Toggle</button>
+
+<ng-template #meuTemplateTrue>
+    <div style="background-color: greenyellow;">ngIf - True</div>
+</ng-template>
+
+<ng-template #meuTemplateFalse>
+    <div style="background-color: orange;">ngIf - False</div>
+</ng-template>
+
+<br />
+<br />
+
+<div style="background-color: gray;">Toggle com div</div>
+<div style="background-color: greenyellow;" *ngIf="minhaProp; else meuTemplateFalse">ngIf - True</div>
+
+<br />
+<br />
+
+<div style="background-color: gray;">Toggle ng-container</div>
+<ng-container *ngIf="minhaProp; then meuTemplateTrue; else meuTemplateFalse"></ng-container>
+
+<br />
+<br />
+
+<div style="background-color: gray;">isTruthy()</div>
+<div style="background-color: greenyellow;" *ngIf="isTruthy(); else meuTemplateFalse">ngIf - True</div>
+
+<br />
+<br />
+
+<div style="background-color: gray;">isFalsy()</div>
+<div style="background-color: greenyellow;" *ngIf="isFalsy(); else meuTemplateFalse">ngIf - True</div>
+
+<br />
+<br />
+
+<div style="background-color: gray;">Div com display: none</div>
+<div style="background-color: greenyellow; display: none;">display: none</div>
+
+<br />
+<br />
+
+<div style="background-color: gray;">Div com visibility: hidden</div>
+<div style="background-color: greenyellow; visibility: hidden;">visibility: hidden</div>
+
+<br />
+<br />
+
+<div style="background-color: gray;">Div com nfIf - false</div>
+<div style="background-color: greenyellowd;" *ngIf="false">nfIf - false</div>

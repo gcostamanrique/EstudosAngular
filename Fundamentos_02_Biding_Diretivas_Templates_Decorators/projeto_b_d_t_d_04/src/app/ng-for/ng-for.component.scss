@@ -1,0 +1,29 @@
+.list {
+    background-color: black;
+    padding: 3px;
+}
+
+.item {
+    padding: 15px;
+    background-color: beige;
+    cursor: pointer;
+
+    &--name {
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+    &--age {
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    &--odd {
+        background-color: bisque;
+    }
+
+    &--highlighted {
+        background-color: greenyellow;
+        border: 3px solid green;
+    }
+}
