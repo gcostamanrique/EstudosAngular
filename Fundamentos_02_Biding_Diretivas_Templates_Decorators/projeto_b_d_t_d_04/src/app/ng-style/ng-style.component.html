@@ -1,0 +1,13 @@
+<button (click)="increaseFontSize()">+A</button>
+<button (click)="decraseFontSize()">-A</button>
+<button (click)="toggleFontColor()">{{ buttonText }}</button>
+
+<br />
+
+<h4 [ngStyle]="{'font-size': fontSize + 'px', 'color': textColor,}">Sou um h4 ngStyle</h4>
+
+<h4 [ngStyle]="stylesObj">Sou um h4 ngStyle com objeto</h4>
+
+<h4 [style.font-size.px]="fontSize" [style.color]="textColor">Sou um h4 property binding style</h4>
+
+<h4 [style]="stylesString">Sou um h4 property binding style com estilos unificados</h4>

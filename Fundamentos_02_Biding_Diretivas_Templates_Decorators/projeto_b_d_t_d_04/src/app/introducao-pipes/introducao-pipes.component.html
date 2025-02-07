@@ -1,0 +1,34 @@
+
+<h4 style="color: white; background-color: black;">Alteracao com metodo toUpperCase</h4>
+<h4> {{ text.toUpperCase() }} </h4>
+
+<br />
+
+<h4 style="color: white; background-color: black;">Alteracao com o pipe uppercase</h4>
+<h4> {{ text | uppercase }} </h4>
+
+<br />
+
+<h4 style="color: white; background-color: black;">Apresentacao do objeto com pipe json</h4>
+<h4>{{ pessoa1 | json }}</h4>
+
+<br />
+
+<h4 style="color: white; background-color: black;">Apresentacao do atributo do objeto com selecao de classe em cada porperty biding</h4>
+<h4 [class]="{'active': pessoa1.status === 1, 'partial': pessoa1.status === 2, 'blocked': pessoa1.status === 3}" >{{ pessoa1.name | json }}</h4>
+<h4 [class]="{'active': pessoa2.status === 1, 'partial': pessoa2.status === 2, 'blocked': pessoa2.status === 3}" >{{ pessoa2.name | json }}</h4>
+<h4 [class]="{'active': pessoa3.status === 1, 'partial': pessoa3.status === 2, 'blocked': pessoa3.status === 3}" >{{ pessoa3.name | json }}</h4>
+
+<br />
+
+<h4 style="color: white; background-color: black;">Apresentacao do atributo do objeto com selecao de classe em um metodo invocado pelo property biding</h4>
+<h4 [class]="getStyle(pessoa1.status)">{{ pessoa1.name }}</h4>
+<h4 [class]="getStyle(pessoa2.status)">{{ pessoa2.name }}</h4>
+<h4 [class]="getStyle(pessoa3.status)">{{ pessoa3.name }}</h4>
+
+<br />
+
+<h4 style="color: white; background-color: black;">Apresentacao do atributo do objeto com pipe</h4>
+<h4 [class]="pessoa1.status | statusClass" >{{ pessoa1.name}}</h4>
+<h4 [class]="pessoa2.status | statusClass" >{{ pessoa2.name}}</h4>
+<h4 [class]="pessoa3.status | statusClass" >{{ pessoa3.name}}</h4>

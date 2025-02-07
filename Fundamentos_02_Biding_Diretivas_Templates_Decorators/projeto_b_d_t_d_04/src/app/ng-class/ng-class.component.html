@@ -1,0 +1,36 @@
+<button (click)="setToGreen()">Green</button>
+<button (click)="setToOrange()">Orange</button>
+
+<br />
+
+<h4 [ngClass]="{'is-color-black is-green': isGreen, 'is-orange': !isGreen}">Sou um h4 com ngClass</h4>
+<h4 [class]="{'is-green': isGreen, 'is-orange': !isGreen}">Sou h4 com porperty binding class</h4>
+
+<br />
+
+<!-- String -->
+<h4 [ngClass]="'is-color-black is-green'">Sou um h4 com ngClass</h4>
+<h4 [class]="'is-color-black is-green'">Sou h4 com porperty binding class</h4>
+
+<br />
+
+<!-- Arrays -->
+<h4 [ngClass]="['is-color-black', 'is-green']">Sou um h4 com ngClass</h4>
+<h4 [class]="['is-color-black', 'is-green']">Sou h4 com porperty binding class</h4>
+
+<br />
+
+<!-- Objetos -->
+<h4 [ngClass]="{'is-green': isGreen, 'is-orange': !isGreen,}">Sou um h4 com ngClass</h4>
+<h4 [class]="{'is-green': isGreen, 'is-orange': !isGreen,}">Sou h4 com porperty binding class</h4>
+
+<br />
+
+<!-- Diferencas -->
+<h4 [ngClass]="{'is-color-black is-green': isGreen, 'is-orange': !isGreen,}">Sou um h4 com ngClass</h4>
+<h4 [class]="{'is-color-black': isGreen, 'is-green': isGreen, 'is-orange': !isGreen,}">Sou h4 com porperty binding class</h4>
+
+<br />
+
+<h4 [ngClass]="{'is-green': isGreen}">Sou um h4 com ngClass</h4>
+<h4 [class.is-green]="isGreen">Sou h4 com porperty binding class</h4>
