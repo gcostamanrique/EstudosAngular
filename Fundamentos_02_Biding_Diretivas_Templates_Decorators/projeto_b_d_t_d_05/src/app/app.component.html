@@ -1,0 +1,43 @@
+<div class="div-component-central">
+  <app-card 
+    [tipoCard]="CardsEnum.Central" 
+    [tituloCentral]="titulo"
+    [textoCentral]="texto">
+
+    <div class="div-component-menor">
+
+      <app-card 
+        [tipoCard]="CardsEnum.Menor" 
+        [tituloCentral]="titulo"
+        [textoCentral]="texto"
+      ></app-card>
+
+      <app-card 
+        [tipoCard]="CardsEnum.Menor" 
+        [tituloCentral]="titulo"
+        [textoCentral]="texto"
+      ></app-card>
+
+      <app-card 
+      [tipoCard]="CardsEnum.Menor" 
+      [tituloCentral]="titulo"
+      [textoCentral]="texto"
+      ></app-card>
+
+    </div>
+
+    <div class="div-component-duvida">
+      
+      <app-card 
+        [tipoCard] = "CardsEnum.Duvida" 
+        [tituloCentral] = "'Alterações!?'"
+        [tituloCentral] = "titulo"
+        [textoCentral] = "texto"
+        (repassarInputEmittTituloCentral) = "receberTitulo($event)"
+        (repassarInputEmittTextoCentral) = "receberTexto($event)"
+      ></app-card> 
+       
+    </div>
+
+  </app-card>
+</div>

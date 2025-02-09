@@ -1,0 +1,41 @@
+<div *ngIf="tipoCard === 'central'">
+    <div class="card-div-central">
+        <h1>{{ tituloCentral }}</h1>
+        <p>{{ textoCentral }}</p>
+        <ng-content></ng-content>
+    </div>
+</div>
+
+<div *ngIf="tipoCard === 'menor'">
+    <div class="card-div-menor">
+        <h2>{{ tituloCentral }}</h2>
+        <p>{{ textoCentral }}</p>
+    </div>
+</div>
+
+<div *ngIf="tipoCard === 'duvida'">
+    <div class="card-div-duvida">
+        <h3 class="card-div-duvida-titulo">{{ tituloCentral }}</h3>
+         
+        <app-input 
+            [estiloInput] = "'input-duvida input-duvida-parte-01'" 
+            [placeholderInput] = "'Título Central'"
+            [maxLengthInput] = "20"
+            [valorInput] = "tituloCentral"
+            (enviarInputEmitt) = "receberInputEmittTituloCentral($event)"
+        ></app-input> 
+                
+        <app-input 
+            [estiloInput]="'input-duvida input-duvida-parte-02'" 
+            [placeholderInput]="'Texto Central'"
+            [maxLengthInput]="75"
+            [valorInput] = "textoCentral"
+            (enviarInputEmitt) = "receberInputEmittTextoCentral($event)"
+        ></app-input> 
+        
+
+        <app-button 
+            [estiloButton]="'button-duvida'" 
+        ></app-button>        
+    </div>
+</div>

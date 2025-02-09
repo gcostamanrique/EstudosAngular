@@ -1,0 +1,20 @@
+.button-duvida {
+    font-family: "Roboto Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: italic;
+
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+    text-align: left;
+
+    color: #FFFFFF;
+    background-color: #7b1196;
+
+    position: relative;
+
+    &:active {
+        bottom: -1px;
+    }
+}

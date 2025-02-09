@@ -1,0 +1,45 @@
+.card-div-central {
+    color: #FFFFFF;
+    background-color: #222222;
+
+    text-align: left;
+    border-radius: 25px;
+    padding: 20px;
+    margin: 20px;
+
+    box-shadow: 2px 2px 5px #7b1196;
+}
+
+.card-div-menor {
+    width: 200px;
+    max-width: 200px;
+
+    height: 200px;
+    max-width: 200px;
+
+    color: #FFFFFF;
+    background-color: #2e3133;
+
+    border-radius: 25px;
+    padding: 20px;
+    margin: 20px;
+    text-align: left;
+    box-shadow: 2px 2px 5px #7b1196;
+}
+
+.card-div-duvida {
+    color: #FFFFFF;
+    background-color: #2e3133;
+
+    display: inline-flex;
+
+    border-radius: 25px;
+    padding: 20px;
+    margin: 20px;
+    text-align: left;
+    box-shadow: 2px 2px 5px #7b1196;
+
+    &-titulo {
+        padding-right: 10px;
+    }
+}
