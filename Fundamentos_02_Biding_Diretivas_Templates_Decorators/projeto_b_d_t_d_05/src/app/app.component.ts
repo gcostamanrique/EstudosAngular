@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CardComponent } from './Components/card/card.component';
 import { CardsEnum } from './Enum/CardsEnum';
+import { DadosTeste, Dados } from './Dados/DadosTeste';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,14 @@ import { CardsEnum } from './Enum/CardsEnum';
 })
 export class AppComponent {
   CardsEnum = CardsEnum;
+
+  DadosTeste = new DadosTeste();
+  
+  listaDados: Dados[] = [];
+
+  ngOnInit(): void {
+    this.listaDados = this.DadosTeste.listaDados;
+  }
 
   titulo: string = 'Título Principal';
 
@@ -28,5 +37,4 @@ export class AppComponent {
     this.texto = valor;
     console.log("texto: " + this.texto);
   }
-
 }
