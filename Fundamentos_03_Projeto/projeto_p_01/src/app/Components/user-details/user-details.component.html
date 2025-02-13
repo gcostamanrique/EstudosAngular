@@ -8,43 +8,43 @@
 
         <mat-list-item>
             <span class="mat-headline-6">Nome: </span>
-            <span class="mat-subtitle-1">Nomes de Teste</span>
+            <span class="mat-subtitle-1">{{ user.nome }}</span>
         </mat-list-item>
         <mat-divider></mat-divider>
 
         <mat-list-item>
             <span class="mat-headline-6">Email: </span>
-            <span class="mat-subtitle-1">Email de Teste</span>
+            <span class="mat-subtitle-1">{{ user.email }}</span>
         </mat-list-item>
         <mat-divider></mat-divider>
 
         <mat-list-item>
             <span class="mat-headline-6">Telefone: </span>
-            <span class="mat-subtitle-1">Telefone de Teste</span>
+            <span class="mat-subtitle-1">{{ user.telefone | phone }}</span>
         </mat-list-item>
         <mat-divider></mat-divider>
 
         <mat-list-item>
             <span class="mat-headline-6">Endereço: </span>
-            <span class="mat-subtitle-1">Endereço de Teste</span>
+            <span class="mat-subtitle-1">{{ user.endereco | address }}</span>
         </mat-list-item>
         <mat-divider></mat-divider>
 
         <mat-list-item>
             <span class="mat-headline-6">Ativo: </span>
-            <span class="mat-subtitle-1">Ativo de Teste</span>
+            <span class="mat-subtitle-1">{{ user.ativo }}</span>
         </mat-list-item>
         <mat-divider></mat-divider>
 
         <mat-list-item>
             <span class="mat-headline-6">Função: </span>
-            <span class="mat-subtitle-1">Função de Teste</span>
+            <span class="mat-subtitle-1">{{ user.funcao }}</span>
         </mat-list-item>
         <mat-divider></mat-divider>
 
         <mat-list-item>
             <span class="mat-headline-6">Data de Cadastro: </span>
-            <span class="mat-subtitle-1">Data de Cadastro de Teste</span>
+            <span class="mat-subtitle-1">{{ user.dataCadastro }}</span>
         </mat-list-item>
         <mat-divider></mat-divider>
 
