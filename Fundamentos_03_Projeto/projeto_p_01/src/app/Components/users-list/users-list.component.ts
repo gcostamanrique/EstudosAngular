@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
 import { UsersList } from '../../Data/users-list';
 import { IUser } from '../../Interfaces/User/user.interface';
@@ -22,7 +22,9 @@ export class UsersListComponent {
 
   displayedColumns = ['name', 'date', 'status'];
 
-  onUserSelected(user: IUser) {
+  @Output('userSelected') userSelectedEmitt = new EventEmitter<IUser>();
 
+  onUserSelected(user: IUser) {
+    this.userSelectedEmitt.emit(user);
   }
 }

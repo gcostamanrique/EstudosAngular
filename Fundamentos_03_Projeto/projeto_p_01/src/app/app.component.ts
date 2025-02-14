@@ -4,7 +4,7 @@ import { UserDetailsComponent } from './Components/user-details/user-details.com
 import { FilterComponent } from './Components/filter/filter.component';
 import { UsersListComponent } from './Components/users-list/users-list.component';
 import { IUser } from './Interfaces/User/user.interface';
-import { UsersList } from './Data/users-list';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -13,10 +13,18 @@ import { UsersList } from './Data/users-list';
     UserDetailsComponent,
     FilterComponent,
     UsersListComponent,
+    NgIf,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
-  userSelected: IUser = UsersList[0];
+export class AppComponent { 
+  userSelected: IUser = {} as IUser;
+
+  showUserDetails: boolean = false;
+
+  onUserSelected(user: IUser) {
+    this.userSelected = user;
+    this.showUserDetails = true;
+  }
 }
