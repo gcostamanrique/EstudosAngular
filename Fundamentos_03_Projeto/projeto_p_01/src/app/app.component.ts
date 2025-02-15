@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { UserDetailsComponent } from './Components/user-details/user-details.component';
 import { FilterComponent } from './Components/filter/filter.component';
 import { UsersListComponent } from './Components/users-list/users-list.component';
 import { IUser } from './Interfaces/User/user.interface';
 import { NgIf } from '@angular/common';
+import { UsersList } from './Data/users-list';
+import { IFilterOptions } from './Interfaces/filter-option.interface';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +20,15 @@ import { NgIf } from '@angular/common';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent { 
+export class AppComponent implements OnInit {
+  usersList: IUser[] = [];
+
+  ngOnInit() {
+    setTimeout( () => {
+      this.usersList = UsersList;
+    }, 1);
+  }   
+
   userSelected: IUser = {} as IUser;
 
   showUserDetails: boolean = false;
@@ -26,5 +36,9 @@ export class AppComponent {
   onUserSelected(user: IUser) {
     this.userSelected = user;
     this.showUserDetails = true;
+  }
+
+  onFilter(filterOptions: IFilterOptions) {
+    
   }
 }

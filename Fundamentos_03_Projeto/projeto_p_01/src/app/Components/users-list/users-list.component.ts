@@ -1,6 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
-import { UsersList } from '../../Data/users-list';
 import { IUser } from '../../Interfaces/User/user.interface';
 import { StatusPipe } from '../../Pipes/status.pipe';
 import { DatePipe } from '@angular/common';
@@ -18,7 +17,7 @@ import { DashIfEmptyPipe } from '../../Pipes/dash-if-empty.pipe';
   styleUrl: './users-list.component.scss'
 })
 export class UsersListComponent {
-  usersList: IUser[] = UsersList;
+  @Input({ required: true }) usersList: IUser[] = [];
 
   displayedColumns = ['name', 'date', 'status'];
 

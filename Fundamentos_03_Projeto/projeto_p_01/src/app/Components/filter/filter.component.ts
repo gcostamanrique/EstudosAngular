@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
@@ -7,6 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { IFilterOptions } from '../../Interfaces/filter-option.interface';
 
 @Component({
   selector: 'app-filter',
@@ -24,8 +25,21 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
   styleUrl: './filter.component.scss'
 })
 export class FilterComponent {
+  filterOptions: IFilterOptions = {
+    name: undefined,
+    startDate: undefined,
+    endDate: undefined,
+    status: undefined,
+  }
+
   statusList = [
-    { value: 'Ativo', viewValue: 'Ativo' },
-    { value: 'Inativo', viewValue: 'Inativo' },
+    { description: 'Ativo', value: true },
+    { description: 'Inativo', value: false },
   ]
+
+  @Output('onFilter') onFilterEmitt = new EventEmitter<IFilterOptions>();
+
+  onFilter() {
+    this.onFilterEmitt.emit(this.filterOptions);
+  }
 }
