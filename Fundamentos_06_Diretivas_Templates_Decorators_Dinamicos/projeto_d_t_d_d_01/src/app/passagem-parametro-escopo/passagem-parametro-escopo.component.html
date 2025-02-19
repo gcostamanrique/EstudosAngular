@@ -1,0 +1,48 @@
+<input type="text" #meuInput ngModel />
+
+<button (click)="clicou(meuInput)">Atualizar</button>
+
+<br />
+<br />
+
+valor: {{ meuInput.value }}
+
+<br />
+<br />
+
+<!-- Os contextos são gerados pelas diretivas ngIF, ngFor, ... -->
+
+<!-- Contexto PAI -->
+<div class="pai" *ngIf="true" >
+    Pai 
+    <br />
+    <input #inputPai ngModel />
+
+    <!-- Contexto FILHO -->
+    <div class="filho" *ngIf="true">
+        Filho 
+        <br /> 
+        <input #inputFilho ngModel />
+
+        <br />
+        <br />
+
+        Pai: {{ inputPai.value }}
+        <br />
+        Filho: {{ inputFilho.value }}
+    </div>
+
+    <br />
+    <br />
+
+    <!-- filho: {{ inputFilho.value }} -->
+</div>
+
+<br />
+<br />
+
+<!-- primo: {{ inputPai.value }} -->
+
+<div class="primo">
+    <!-- primo: {{ inputPai.value }} -->
+</div>
